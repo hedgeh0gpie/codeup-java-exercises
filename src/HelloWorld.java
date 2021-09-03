@@ -11,6 +11,11 @@ public class HelloWorld {
 
         System.out.println(myString);
 
+//        long myNumber;
+//        myNumber = 123L;
+
+//        float myNumber = 3.14F;
+
         double myNumber = 3.14;
 
         System.out.println(myNumber);
@@ -50,6 +55,11 @@ public class HelloWorld {
 
 //        byte z  = 128;
 //        System.out.println(z);
+
+        System.out.println(Integer.MAX_VALUE);
+
+        int testInteger = 2147483647;
+        System.out.println(++testInteger);
 
     }
 
