@@ -139,6 +139,9 @@ public class ControlFlowExercises {
 //        D : 66 - 60
 //        F : 59 - 0
 
+
+        System.out.println();
+
         System.out.println("Please enter a numerical grade from 0 to 100");
         int userNumberGrade = Integer.parseInt(scanner.nextLine());
         String userLetterGrade = "";
