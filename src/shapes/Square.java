@@ -27,17 +27,21 @@ package shapes;
 
 public class Square extends Rectangle{
 
+    private float side;
+
     public Square(float side) {
         super(side, side);
+        this.side = side;
     }
 
     public float getArea() {
-        return 4 * this.length;
+        System.out.println("This is the square's getArea() method");
+        return 4 * this.side;
     }
 
     public float getPerimeter() {
-        return (float) Math.pow(this.length, 2);
+        System.out.println("This is the square's getPerimeter() method");
+        return (float) Math.pow(this.side, 2);
     }
-
 
 }
