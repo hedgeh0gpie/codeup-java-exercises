@@ -11,6 +11,7 @@ public class PetTest {
         Ryu.species = "Siamese";
 
         Ryu.responseToCommand("Stop bringing dead birds into my room!!");
+        Ryu.rest(12);
 
         Dog Lily = new Dog();
 
@@ -20,6 +21,7 @@ public class PetTest {
         Lily.species = "Chihuahua mix";
 
         Lily.responseToCommand("Come here for kisses!! *smooch*");
+        Lily.rest(9);
 
     }
 }
