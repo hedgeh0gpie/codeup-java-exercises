@@ -25,23 +25,51 @@
 
 package shapes;
 
-public class Square extends Rectangle{
-
-    private float side;
-
-    public Square(float side) {
+public class Square extends Quadrilateral {
+    public Square(double side) {
         super(side, side);
-        this.side = side;
+        this.length = side;
+        this.width = side;
     }
 
-    public float getArea() {
-        System.out.println("This is the square's getArea() method");
-        return 4 * this.side;
+    @Override
+    public void setLength(double length) {
+        this.length = length;
+        this.width = length;
+
     }
 
-    public float getPerimeter() {
-        System.out.println("This is the square's getPerimeter() method");
-        return (float) Math.pow(this.side, 2);
+    @Override
+    public void setWidth(double width) {
+        this.width = width;
+        this.length = width;
     }
+
+    @Override
+    public double getPerimeter() {
+        return Math.pow(this.length, 2);
+    }
+
+    @Override
+    public double getArea() {
+        return 4 * this.length;
+    }
+
+//    private float side;
+//
+//    public Square(float side) {
+//        super(side, side);
+//        this.side = side;
+//    }
+//
+//    public float getArea() {
+//        System.out.println("This is the square's getArea() method");
+//        return 4 * this.side;
+//    }
+//
+//    public float getPerimeter() {
+//        System.out.println("This is the square's getPerimeter() method");
+//        return (float) Math.pow(this.side, 2);
+//    }
 
 }
