@@ -8,6 +8,9 @@
 
 package warmups;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class JavaDrills {
 
 // Source: https://stackoverflow.com/questions/1729778/how-can-i-invert-the-case-of-a-string-in-java
@@ -27,9 +30,35 @@ public class JavaDrills {
         return new String(chars);
     }
 
+//    In `codeup-java-exercises`, in `JavaDrills`:
+//    Create a static method, returnTotalDifference, that takes in two lists of integers and returns the difference between the sum of all integers in the first list minus the sum of all integers in the second list.
+
+//    returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)); // returns 9
+//    returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)); // returns 3
+//    returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)); // returns 2
+
+
+    public static int returnTotalDifference(List<Integer> nums1, List<Integer> nums2) {
+        int accumulator1 = 0;
+        int accumulator2 = 0;
+
+        for (Integer num : nums1) {
+            accumulator1 += num;
+        }
+        for (Integer num : nums2) {
+            accumulator2 += num;
+        }
+        return accumulator1 - accumulator2;
+    }
+
     public static void main(String[] args) {
         System.out.println(JavaDrills.flipOuterCase("cAt"));
         System.out.println(JavaDrills.flipOuterCase("CaT"));
+
+        System.out.println(returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)));
+        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)));
+        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)));
+
     }
 
 }
