@@ -42,16 +42,41 @@ public class ConsoleExercises {
 //        Assume that the rooms are perfect rectangles.
 //        Assume that the user will enter valid numeric data for length and width.
 
+//		System.out.println("Enter the length of the classroom");
+//        int length = Integer.parseInt(scanner.nextLine());
+//		System.out.println("Enter the width of the classroom");
+//		int width = Integer.parseInt(scanner.nextLine());
+//		int areaOfClassroom = length * width;
+//		int perimeterOfClassroom = (2 * length) + (2 * width);
+//		System.out.println("The area of the classroom is: " + areaOfClassroom);
+//		System.out.println("The perimeter of the classroom is: " + perimeterOfClassroom);
 
-		System.out.println("Enter the length of the classroom");
-        int length = Integer.parseInt(scanner.nextLine());
-		System.out.println("Enter the width of the classroom");
-		int width = Integer.parseInt(scanner.nextLine());
-		int areaOfClassroom = length * width;
-		int perimeterOfClassroom = (2 * length) + (2 * width);
-		System.out.println("The area of the classroom is: " + areaOfClassroom);
-		System.out.println("The perimeter of the classroom is: " + perimeterOfClassroom);
 
+		//		Bonuses
+//
+//		In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in addition to the area and perimeter.
+
+//		System.out.println("Enter the length of the classroom");
+//		float length = scanner.nextFloat();
+//		System.out.println("Enter the width of the classroom");
+//		float width = scanner.nextFloat();
+//		System.out.println("Enter the height of the classroom");
+//		float height = scanner.nextFloat();
+//		float areaOfClassroom = length * width;
+//		float perimeterOfClassroom = (2 * length) + (2 * width);
+//		float volumeOfClassroom = length * width * height;
+//		System.out.println("The area of the classroom is: " + areaOfClassroom);
+//		System.out.println("The perimeter of the classroom is: " + perimeterOfClassroom);
+//		System.out.println("The perimeter of the classroom is: " + volumeOfClassroom);
+
+		//***** REST OF BONUSES DON'T MAKE SENSE *****
+//		The Scanner class can be told specifically what characters or pattern separates tokens in a piece of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner (assuming the variable holding the Scanner is named scanner):
+//
+//		scanner.useDelimiter("\n");
+//
+//		How does this change the way your program operates?
+//
+//		Rewrite your classroom program to use nextInt method. If you added the line of code above to your application, you should now have no trouble handling multiple pieces of user input.
 
 
 
