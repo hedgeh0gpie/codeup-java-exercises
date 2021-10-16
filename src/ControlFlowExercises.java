@@ -140,33 +140,74 @@ public class ControlFlowExercises {
 //        F : 59 - 0
 
 
-        System.out.println();
+//        System.out.println("Please enter a numerical grade from 0 to 100");
+//        int userNumberGrade = Integer.parseInt(scanner.nextLine());
+//        String userLetterGrade = "";
+//
+//        if (userNumberGrade >= 88) {
+//            userLetterGrade = "A";
+//        } else if (userNumberGrade < 88 && userNumberGrade >= 80) {
+//            userLetterGrade = "B";
+//        } else if (userNumberGrade < 80 && userNumberGrade >= 67) {
+//            userLetterGrade = "C";
+//        } else if (userNumberGrade < 67 && userNumberGrade >= 60) {
+//            userLetterGrade = "D";
+//        } else if (userNumberGrade < 60) {
+//            userLetterGrade = "F";
+//        }
+//
+//        System.out.println("Would you like to continue? Y or N");
+//        String userChoice = scanner.nextLine();
+//
+//        if (userChoice.equalsIgnoreCase("Y")) {
+//            System.out.println("Your grade is: " + userLetterGrade);
+//        } else {
+//            System.out.println("Don't be scared to find out your grade!");
+//        }
+
+//        TODO: Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
         System.out.println("Please enter a numerical grade from 0 to 100");
         int userNumberGrade = Integer.parseInt(scanner.nextLine());
         String userLetterGrade = "";
 
-        if (userNumberGrade >= 88) {
+        if (userNumberGrade <= 100 && userNumberGrade >= 98) {
+            userLetterGrade = "A+";
+        } else if (userNumberGrade < 98 && userNumberGrade >= 92) {
             userLetterGrade = "A";
-        } else if (userNumberGrade < 88 && userNumberGrade >= 80) {
+        } else if (userNumberGrade < 92 && userNumberGrade >= 88) {
+            userLetterGrade = "A-";
+        } else if (userNumberGrade < 88 && userNumberGrade >= 86) {
+            userLetterGrade = "B+";
+        } else if (userNumberGrade < 86 && userNumberGrade >= 83) {
             userLetterGrade = "B";
-        } else if (userNumberGrade < 80 && userNumberGrade >= 67) {
+        } else if (userNumberGrade < 83 && userNumberGrade >= 80) {
+            userLetterGrade = "B-";
+        } else if (userNumberGrade < 80 && userNumberGrade >= 75) {
             userLetterGrade = "C";
-        } else if (userNumberGrade < 67 && userNumberGrade >= 60) {
+        } else if (userNumberGrade < 75 && userNumberGrade >= 70) {
+            userLetterGrade = "C";
+        } else if (userNumberGrade < 70 && userNumberGrade >= 67) {
+            userLetterGrade = "C";
+        } else if (userNumberGrade < 67 && userNumberGrade >= 65) {
+            userLetterGrade = "D+";
+        } else if (userNumberGrade < 65 && userNumberGrade >= 62) {
             userLetterGrade = "D";
+        } else if (userNumberGrade < 62 && userNumberGrade >= 60) {
+            userLetterGrade = "D-";
         } else if (userNumberGrade < 60) {
             userLetterGrade = "F";
         }
 
+
         System.out.println("Would you like to continue? Y or N");
         String userChoice = scanner.nextLine();
 
-        if (userChoice.equals("Y")) {
+        if (userChoice.equalsIgnoreCase("Y")) {
             System.out.println("Your grade is: " + userLetterGrade);
         } else {
             System.out.println("Don't be scared to find out your grade!");
         }
-
 
     }
 
