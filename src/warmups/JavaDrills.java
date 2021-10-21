@@ -1,10 +1,4 @@
-// In `codeup-java-exercises`, create a class `JavaDrills`, with the following:
-// Create a public static method, `flipOuterCase`, that takes in a string and returns the string with the case reversed for the first and last letters. Assume the input will be three or more characters long.
-//        Example inputs and expected outputs...
-//        System.out.println(flipOuterCase(“cat”)); // CaT
-//        System.out.println(flipOuterCase(“CaT”)); // cat
-//        System.out.println(flipOuterCase(“caT”)); // Cat
-//        System.out.println(flipOuterCase(“cAt”)); // CAT
+
 
 package warmups;
 
@@ -12,6 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class JavaDrills {
+
+    // In `codeup-java-exercises`, create a class `JavaDrills`, with the following:
+// Create a public static method, `flipOuterCase`, that takes in a string and returns the string with the case reversed for the first and last letters. Assume the input will be three or more characters long.
+//        Example inputs and expected outputs...
+//        System.out.println(flipOuterCase(“cat”)); // CaT
+//        System.out.println(flipOuterCase(“CaT”)); // cat
+//        System.out.println(flipOuterCase(“caT”)); // Cat
+//        System.out.println(flipOuterCase(“cAt”)); // CAT
 
 // Source: https://stackoverflow.com/questions/1729778/how-can-i-invert-the-case-of-a-string-in-java
     public static String flipOuterCase(String str) {
@@ -51,14 +53,57 @@ public class JavaDrills {
         return accumulator1 - accumulator2;
     }
 
-    public static void main(String[] args) {
-        System.out.println(JavaDrills.flipOuterCase("cAt"));
-        System.out.println(JavaDrills.flipOuterCase("CaT"));
 
-        System.out.println(returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)));
-        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)));
-        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)));
+//    In `codeup-java-exercises`, in`JavaDrills`, add the following:
+//    Create a public static method, `flipInnerCase`, that takes in a string and returns the string
+//    with the case of all letters reversed EXCEPT for the first and last letters. Assume the input will be three or more characters long.
+//    Example inputs and expected outputs...
+//            System.out.println(flipInnerCase(“cat”)); // cAt
+//  System.out.println(flipInnerCase(“CaT”)); // CAT
+//  System.out.println(flipInnerCase(“caT”)); // cAT
+//  System.out.println(flipInnerCase(“codeup”)); // cODEUp
+//  System.out.println(flipInnerCase(“CoDeup”)); // COdEUp
+
+    public static String flipInnerCase(String str) {
+
+        char[] chars = str.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+
+            if (chars[i] != chars[0] && chars[i] != chars[chars.length - 1]) {
+
+                if (Character.isUpperCase(chars[i])) {
+
+                    chars[i] = Character.toLowerCase(chars[i]);
+
+                } else if (Character.isLowerCase(chars[i])) {
+
+                    chars[i] = Character.toUpperCase(chars[i]);
+                }
+
+            }
+
+        }
+
+        return new String(chars);
+    }
+    public static void main(String[] args) {
+//        System.out.println(JavaDrills.flipOuterCase("cAt"));
+//        System.out.println(JavaDrills.flipOuterCase("CaT"));
+//
+//        System.out.println(returnTotalDifference(Arrays.asList(10, 2, 3), Arrays.asList(1, 2, 3)));
+//        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7)));
+//        System.out.println(returnTotalDifference(Arrays.asList(10, 1), Arrays.asList(1, 7, 1)));
+
+        System.out.println(flipInnerCase("CaT")); // CAT
+        System.out.println(flipInnerCase("caT")); // cAT
+        System.out.println(flipInnerCase("codeup")); // cODEUp
+        System.out.println(flipInnerCase("CoDeup")); // COdEUp
+
+
 
     }
+
+
 
 }
